@@ -1,0 +1,21 @@
+[
+    {
+        "id": "8f8264d6.c1e658",
+        "type": "function",
+        "z": "738042b.15e12bc",
+        "name": "",
+        "func": "msg.payload = global.get('data')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "bfe996da.ce18b8"
+            ]
+        ]
+    }
+]
