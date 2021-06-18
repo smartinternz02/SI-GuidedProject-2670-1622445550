@@ -20,15 +20,17 @@ client = wiotp.sdk.device.DeviceClient(config=myConfig, logHandlers=None)
 client.connect()
 
 while True:
-    allow=random.randint(0,100)
-    out=random.randint(0,100)
+    entry=input("Enter your value:  ")
+    print(entry)
+    exit=input("Enter your value:   ")
+    print(exit)
     parslots1=random.randint(0,100)
     parslots2=random.randint(0,100)
     parslots3=random.randint(0,100)
     parslots4=random.randint(0,100)
     parslots5=random.randint(0,100)
     parslots6=random.randint(0,100)
-    myData={'U':{'allow':allow, 'out':out, 'parslots1':parslots1, 'parslots2':parslots2, 'parslots3':parslots3, 'parslots4':parslots4, 'parslots5':parslots5, 'parslots6':parslots6}}
+    myData={'U':{'entry':entry, 'exit':exit, 'parslots1':parslots1, 'parslots2':parslots2, 'parslots3':parslots3, 'parslots4':parslots4, 'parslots5':parslots5, 'parslots6':parslots6}}
     client.publishEvent(eventId="status", msgFormat="json", data=myData, qos=0, onPublish=None)
     print("Published data Successfully: %s", myData)
     client.commandCallback = myCommandCallback
